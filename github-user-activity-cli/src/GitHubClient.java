@@ -29,10 +29,7 @@ public class GitHubClient {
 
             int statusCode = response.statusCode();
             if (statusCode == 200) {
-                // do stuff
-                System.out.println("Response body: " + response.body()); // raw body
-
-                return response.body();
+                return response.body(); // do stuff (return raw body)
             } else {
                 System.out.println("Server returned status code: " + statusCode);
             }
