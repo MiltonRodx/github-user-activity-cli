@@ -1,4 +1,3 @@
-````markdown
 # github-user-activity-cli
 
 Simple Command-Line Interface (CLI) application written in Java that fetches a GitHub user's recent public activity and displays it in the terminal.
@@ -25,7 +24,7 @@ The application must:
 - Display the activity in the terminal.
 - Handle invalid usernames, network errors, and API failures gracefully.
 
-### Usage
+## Usage
 
 ```bash
 github-activity <username>
@@ -37,19 +36,19 @@ Example:
 github-activity kamranahmedse
 ```
 
-### GitHub API Endpoint
+## GitHub API Endpoint
 
-```
+```text
 https://api.github.com/users/<username>/events
 ```
 
 Example:
 
-```
+```text
 https://api.github.com/users/kamranahmedse/events
 ```
 
-### Expected Output
+## Expected Output
 
 ```text
 - Pushed 3 commits to kamranahmedse/developer-roadmap
@@ -73,12 +72,16 @@ Possible improvements include:
 - Cache fetched data to improve performance and reduce API requests.
 - Explore additional GitHub API endpoints to retrieve more user or repository information.
 
+---
 
-## Installation guide:
+# Installation Guide
+
 ## Global Installation (`github-activity`)
 
 ### 1. Compile and Package the JAR
+
 Run this inside your source code folder (`App.java` must contain the `main` method):
+
 ```bash
 javac App.java
 jar cvfe github-activity.jar App App.class
@@ -89,7 +92,8 @@ jar cvfe github-activity.jar App App.class
 <details>
 <summary><b>Windows</b></summary>
 
-Run in CMD as **Administrator**:
+Run in **Command Prompt** as **Administrator**:
+
 ```cmd
 mkdir C:\tools
 move github-activity.jar C:\tools\
@@ -97,7 +101,9 @@ echo @echo off > C:\tools\github-activity.bat
 echo java -jar "C:\tools\github-activity.jar" %%* >> C:\tools\github-activity.bat
 setx /M PATH "%PATH%;C:\tools"
 ```
-*(Restart your terminal after running this)*
+
+*Restart your terminal after running this.*
+
 </details>
 
 <details>
@@ -106,10 +112,12 @@ setx /M PATH "%PATH%;C:\tools"
 ```bash
 mkdir -p ~/.local/bin
 mv github-activity.jar ~/.local/bin/
-echo -e '#!/bin/bash\njava -jar "\$HOME/.local/bin/github-activity.jar" "\$@"' > ~/.local/bin/github-activity
+echo -e '#!/bin/bash\njava -jar "$HOME/.local/bin/github-activity.jar" "$@"' > ~/.local/bin/github-activity
 chmod +x ~/.local/bin/github-activity
-echo 'export PATH="\$HOME/.local/bin:\$PATH"' >> ~/.bashrc && source ~/.bashrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
+
 </details>
 
 <details>
@@ -118,15 +126,16 @@ echo 'export PATH="\$HOME/.local/bin:\$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```bash
 mkdir -p ~/.local/bin
 mv github-activity.jar ~/.local/bin/
-echo -e '#!/bin/bash\njava -jar "\$HOME/.local/bin/github-activity.jar" "\$@"' > ~/.local/bin/github-activity
+echo -e '#!/bin/bash\njava -jar "$HOME/.local/bin/github-activity.jar" "$@"' > ~/.local/bin/github-activity
 chmod +x ~/.local/bin/github-activity
-echo 'export PATH="\$HOME/.local/bin:\$PATH"' >> ~/.zshrc && source ~/.zshrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 ```
+
 </details>
 
 ### 3. Usage
-```bash
-github-activity [arguments]
-```
 
-````
+```bash
+github-activity <username>
+```
