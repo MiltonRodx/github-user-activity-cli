@@ -57,7 +57,7 @@ public class Utils {
         String[] repos = extractField(extractBlock(pJson, "repo"), "name"); // i guess it works. repo -> name
         String[] payloads = extractField(extractBlock(pJson, "payload"), "action"); // Looks better i guess, payload -> action
 
-        System.out.printf("IDS len: | Types len: %d | repos len: %d | payloads len: %d%n", ids.length, types.length, repos.length, payloads.length);
+        System.out.printf("IDS len: %d | Types len: %d | repos len: %d | payloads len: %d%n", ids.length, types.length, repos.length, payloads.length);
         
         if (ids.length ==  types.length &&     // if all of these have the same length
             types.length == repos.length &&
