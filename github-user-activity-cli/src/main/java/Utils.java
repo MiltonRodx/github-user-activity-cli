@@ -83,6 +83,10 @@ public class Utils {
         }
     }
 
+    public double addNumbers (final double n1, final double n2) {
+        return n1 + n2;
+    }
+
 
     /*               OK I AM NOT GOING TO USE THESE... THANKS JACKSON LIBRARY
     // from raw Json, iterate over it and make new UserActivity object
