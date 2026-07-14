@@ -4,7 +4,10 @@ Simple Command-Line Interface (CLI) application written in Java that fetches a G
 
 ---
 
-## Assignment
+## Assignment (from roadmap.sh)
+
+
+[https://roadmap.sh/projects/github-user-activity](https://roadmap.sh/projects/github-user-activity)
 
 In this project, you will build a simple command-line interface (CLI) to fetch the recent activity of a GitHub user and display it in the terminal.
 
