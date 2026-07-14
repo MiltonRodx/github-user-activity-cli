@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /* This is my App.java */
 public class App {
     public static void main(String[] args) throws Exception {
+        
         GitHubClient client = new GitHubClient();
         Utils utils = new Utils(); // to do some stuff
-
         ObjectMapper objMapper = new ObjectMapper();  // invoke the object mapper!!!!!!
 
         // if there is a single argument (username)
